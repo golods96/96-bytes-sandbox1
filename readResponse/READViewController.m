@@ -47,7 +47,7 @@
 
 - (void)buttonClicked:(UIButton*)button
 {
-    NSLog(@"clicked");
+    NSLog(@"clicked once");
 }
 
 @end
