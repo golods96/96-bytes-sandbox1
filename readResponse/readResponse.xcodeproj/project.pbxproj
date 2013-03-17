@@ -54,6 +54,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DF11F99D16F57F4400B02786 /* images */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = images;
+			sourceTree = "<group>";
+		};
 		DFA5417016F4205A003EEBD3 = {
 			isa = PBXGroup;
 			children = (
@@ -97,6 +104,7 @@
 		DFA5418316F4205A003EEBD3 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				DF11F99D16F57F4400B02786 /* images */,
 				DFA5418416F4205A003EEBD3 /* readResponse-Info.plist */,
 				DFA5418516F4205A003EEBD3 /* InfoPlist.strings */,
 				DFA5418816F4205A003EEBD3 /* main.m */,
@@ -303,6 +311,7 @@
 				DFA541A116F4205A003EEBD3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

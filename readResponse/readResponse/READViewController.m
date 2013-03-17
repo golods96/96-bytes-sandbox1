@@ -45,9 +45,10 @@
     
 }
 
-- (void)buttonClicked:(UIButton*)button
+- (void)buttonClicked:(id)sender
 {
-    NSLog(@"clicked");
+    UIButton *clickedButton = (UIButton *)sender;
+    [clickedButton setTitle:@"Call HTTPRequest method" forState: UIControlStateNormal];
 }
 
 @end
