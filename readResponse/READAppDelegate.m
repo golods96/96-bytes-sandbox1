@@ -11,6 +11,9 @@
 #import "READViewController.h"
 
 @implementation READAppDelegate
+@synthesize window;
+@synthesize viewController;
+
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {

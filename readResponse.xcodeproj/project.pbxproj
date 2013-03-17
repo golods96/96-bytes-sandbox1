@@ -17,8 +17,7 @@
 		DFA5419116F4205A003EEBD3 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DFA5419016F4205A003EEBD3 /* Default@2x.png */; };
 		DFA5419316F4205A003EEBD3 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DFA5419216F4205A003EEBD3 /* Default-568h@2x.png */; };
 		DFA5419616F4205A003EEBD3 /* READViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DFA5419516F4205A003EEBD3 /* READViewController.m */; };
-		DFA5419916F4205A003EEBD3 /* READViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = DFA5419716F4205A003EEBD3 /* READViewController_iPhone.xib */; };
-		DFA5419C16F4205A003EEBD3 /* READViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = DFA5419A16F4205A003EEBD3 /* READViewController_iPad.xib */; };
+		DFA541A516F438DA003EEBD3 /* readView.m in Sources */ = {isa = PBXBuildFile; fileRef = DFA541A416F438DA003EEBD3 /* readView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,8 +36,8 @@
 		DFA5419216F4205A003EEBD3 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		DFA5419416F4205A003EEBD3 /* READViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = READViewController.h; sourceTree = "<group>"; };
 		DFA5419516F4205A003EEBD3 /* READViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = READViewController.m; sourceTree = "<group>"; };
-		DFA5419816F4205A003EEBD3 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/READViewController_iPhone.xib; sourceTree = "<group>"; };
-		DFA5419B16F4205A003EEBD3 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/READViewController_iPad.xib; sourceTree = "<group>"; };
+		DFA541A316F438DA003EEBD3 /* readView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = readView.h; sourceTree = "<group>"; };
+		DFA541A416F438DA003EEBD3 /* readView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = readView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,12 +84,11 @@
 		DFA5418216F4205A003EEBD3 /* readResponse */ = {
 			isa = PBXGroup;
 			children = (
+				DFA541A216F43874003EEBD3 /* classes */,
 				DFA5418B16F4205A003EEBD3 /* READAppDelegate.h */,
 				DFA5418C16F4205A003EEBD3 /* READAppDelegate.m */,
 				DFA5419416F4205A003EEBD3 /* READViewController.h */,
 				DFA5419516F4205A003EEBD3 /* READViewController.m */,
-				DFA5419716F4205A003EEBD3 /* READViewController_iPhone.xib */,
-				DFA5419A16F4205A003EEBD3 /* READViewController_iPad.xib */,
 				DFA5418316F4205A003EEBD3 /* Supporting Files */,
 			);
 			path = readResponse;
@@ -108,6 +106,15 @@
 				DFA5419216F4205A003EEBD3 /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DFA541A216F43874003EEBD3 /* classes */ = {
+			isa = PBXGroup;
+			children = (
+				DFA541A316F438DA003EEBD3 /* readView.h */,
+				DFA541A416F438DA003EEBD3 /* readView.m */,
+			);
+			name = classes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -166,8 +173,6 @@
 				DFA5418F16F4205A003EEBD3 /* Default.png in Resources */,
 				DFA5419116F4205A003EEBD3 /* Default@2x.png in Resources */,
 				DFA5419316F4205A003EEBD3 /* Default-568h@2x.png in Resources */,
-				DFA5419916F4205A003EEBD3 /* READViewController_iPhone.xib in Resources */,
-				DFA5419C16F4205A003EEBD3 /* READViewController_iPad.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -181,6 +186,7 @@
 				DFA5418916F4205A003EEBD3 /* main.m in Sources */,
 				DFA5418D16F4205A003EEBD3 /* READAppDelegate.m in Sources */,
 				DFA5419616F4205A003EEBD3 /* READViewController.m in Sources */,
+				DFA541A516F438DA003EEBD3 /* readView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -193,22 +199,6 @@
 				DFA5418616F4205A003EEBD3 /* en */,
 			);
 			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		DFA5419716F4205A003EEBD3 /* READViewController_iPhone.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				DFA5419816F4205A003EEBD3 /* en */,
-			);
-			name = READViewController_iPhone.xib;
-			sourceTree = "<group>";
-		};
-		DFA5419A16F4205A003EEBD3 /* READViewController_iPad.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				DFA5419B16F4205A003EEBD3 /* en */,
-			);
-			name = READViewController_iPad.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

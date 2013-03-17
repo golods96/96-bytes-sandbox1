@@ -7,6 +7,7 @@
 //
 
 #import "READViewController.h"
+#import "readView.h"
 
 @interface READViewController ()
 
@@ -24,6 +25,29 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void) loadView{
+    [super loadView];
+    CGRect frame = CGRectMake(10, 10, 300, 300);
+    
+    readView*   myView = [[readView alloc ] initWithFrame:frame] ;
+    
+    myView.clipsToBounds = YES;
+    [[self view] addSubview:myView];
+    
+    UIButton* myButton = [[UIButton alloc] initWithFrame:frame];
+
+    [myButton setTitle:@"unpressed" forState:UIControlStateNormal];
+    [myButton addTarget:self action:@selector(buttonClicked:) forControlEvents:UIControlEventTouchUpInside];
+    
+    [[self view] addSubview:myButton ];
+    
+}
+
+- (void)buttonClicked:(UIButton*)button
+{
+    NSLog(@"clicked");
 }
 
 @end

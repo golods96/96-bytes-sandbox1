@@ -10,7 +10,10 @@
 
 @class READViewController;
 
-@interface READAppDelegate : UIResponder <UIApplicationDelegate>
+@interface READAppDelegate : UIResponder <UIApplicationDelegate> {
+    UIWindow *window;
+    READViewController *readController;
+}
 
 @property (strong, nonatomic) UIWindow *window;
 
