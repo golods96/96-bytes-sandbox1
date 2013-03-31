@@ -7,6 +7,7 @@
 //
 
 #import "READConnection.h"
+#import "READParser.h"
 
 @implementation READConnection
 
@@ -25,7 +26,7 @@
     
     
     if (myConnection){
-        receivedData = [NSMutableData data];
+        receivedData = [NSData data];
         NSLog(@"good");
         
     } else{
@@ -50,7 +51,8 @@
 {
     // Append the new data to receivedData.
     // receivedData is an instance variable declared elsewhere.
-    [receivedData appendData:data];
+    //[receivedData appendData:data];
+    receivedData = data;
 }
 
 - (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error
@@ -66,8 +68,13 @@
     // do something with the data
     // receivedData is declared as a method instance elsewhere
     NSLog(@"Succeeded! Received %d bytes of data",[receivedData length]);
+    NSString *str = [[NSString alloc] initWithData:receivedData encoding:NSUTF8StringEncoding];
+   // NSLog(@"str: %@", str);
     
+    READParser *myParser = [READParser alloc];
 
+    
+    [myParser establishDBConnection];
 }
 
 @end

@@ -2,7 +2,7 @@
 //  READParser.h
 //  readResponse
 //
-//  Created by Lev on 3/27/13.
+//  Created by Lev on 3/30/13.
 //  Copyright (c) 2013 96 Bytes. All rights reserved.
 //
 
@@ -10,7 +10,7 @@
 
 @interface READParser : NSObject
 
-
-- (void) parseData: (NSData *) receivedData;
+- (void) establishDBConnection;
+- (void) openDB : (NSString *) writablePath;
 
 @end

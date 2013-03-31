@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DF6B00661707EBE10073F5C6 /* READParser.m in Sources */ = {isa = PBXBuildFile; fileRef = DF6B00651707EBE10073F5C6 /* READParser.m */; };
+		DF6B00691707EFB30073F5C6 /* read.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = DF6B00681707EFB30073F5C6 /* read.sqlite */; };
+		DF71633B16FEA8690015E788 /* READConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = DF71633A16FEA8690015E788 /* READConnection.m */; };
 		DFA5417D16F4205A003EEBD3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DFA5417C16F4205A003EEBD3 /* UIKit.framework */; };
 		DFA5417F16F4205A003EEBD3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DFA5417E16F4205A003EEBD3 /* Foundation.framework */; };
 		DFA5418116F4205A003EEBD3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DFA5418016F4205A003EEBD3 /* CoreGraphics.framework */; };
@@ -18,9 +21,15 @@
 		DFA5419316F4205A003EEBD3 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DFA5419216F4205A003EEBD3 /* Default-568h@2x.png */; };
 		DFA5419616F4205A003EEBD3 /* READViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DFA5419516F4205A003EEBD3 /* READViewController.m */; };
 		DFA541A516F438DA003EEBD3 /* readView.m in Sources */ = {isa = PBXBuildFile; fileRef = DFA541A416F438DA003EEBD3 /* readView.m */; };
+		DFBADA181703F7580093BE21 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = DFBADA171703F7580093BE21 /* libsqlite3.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DF6B00641707EBE10073F5C6 /* READParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = READParser.h; sourceTree = "<group>"; };
+		DF6B00651707EBE10073F5C6 /* READParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = READParser.m; sourceTree = "<group>"; };
+		DF6B00681707EFB30073F5C6 /* read.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = read.sqlite; sourceTree = "<group>"; };
+		DF71633916FEA8690015E788 /* READConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = READConnection.h; sourceTree = "<group>"; };
+		DF71633A16FEA8690015E788 /* READConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = READConnection.m; sourceTree = "<group>"; };
 		DFA5417916F4205A003EEBD3 /* readResponse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = readResponse.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFA5417C16F4205A003EEBD3 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		DFA5417E16F4205A003EEBD3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -38,6 +47,7 @@
 		DFA5419516F4205A003EEBD3 /* READViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = READViewController.m; sourceTree = "<group>"; };
 		DFA541A316F438DA003EEBD3 /* readView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = readView.h; sourceTree = "<group>"; };
 		DFA541A416F438DA003EEBD3 /* readView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = readView.m; sourceTree = "<group>"; };
+		DFBADA171703F7580093BE21 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +55,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DFBADA181703F7580093BE21 /* libsqlite3.dylib in Frameworks */,
 				DFA5417D16F4205A003EEBD3 /* UIKit.framework in Frameworks */,
 				DFA5417F16F4205A003EEBD3 /* Foundation.framework in Frameworks */,
 				DFA5418116F4205A003EEBD3 /* CoreGraphics.framework in Frameworks */,
@@ -61,9 +72,18 @@
 			name = images;
 			sourceTree = "<group>";
 		};
+		DF6B00671707EF720073F5C6 /* database */ = {
+			isa = PBXGroup;
+			children = (
+				DF6B00681707EFB30073F5C6 /* read.sqlite */,
+			);
+			name = database;
+			sourceTree = "<group>";
+		};
 		DFA5417016F4205A003EEBD3 = {
 			isa = PBXGroup;
 			children = (
+				DFBADA171703F7580093BE21 /* libsqlite3.dylib */,
 				DFA5418216F4205A003EEBD3 /* readResponse */,
 				DFA5417B16F4205A003EEBD3 /* Frameworks */,
 				DFA5417A16F4205A003EEBD3 /* Products */,
@@ -104,6 +124,7 @@
 		DFA5418316F4205A003EEBD3 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				DF6B00671707EF720073F5C6 /* database */,
 				DF11F99D16F57F4400B02786 /* images */,
 				DFA5418416F4205A003EEBD3 /* readResponse-Info.plist */,
 				DFA5418516F4205A003EEBD3 /* InfoPlist.strings */,
@@ -121,6 +142,10 @@
 			children = (
 				DFA541A316F438DA003EEBD3 /* readView.h */,
 				DFA541A416F438DA003EEBD3 /* readView.m */,
+				DF71633916FEA8690015E788 /* READConnection.h */,
+				DF71633A16FEA8690015E788 /* READConnection.m */,
+				DF6B00641707EBE10073F5C6 /* READParser.h */,
+				DF6B00651707EBE10073F5C6 /* READParser.m */,
 			);
 			name = classes;
 			sourceTree = "<group>";
@@ -181,6 +206,7 @@
 				DFA5418F16F4205A003EEBD3 /* Default.png in Resources */,
 				DFA5419116F4205A003EEBD3 /* Default@2x.png in Resources */,
 				DFA5419316F4205A003EEBD3 /* Default-568h@2x.png in Resources */,
+				DF6B00691707EFB30073F5C6 /* read.sqlite in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -195,6 +221,8 @@
 				DFA5418D16F4205A003EEBD3 /* READAppDelegate.m in Sources */,
 				DFA5419616F4205A003EEBD3 /* READViewController.m in Sources */,
 				DFA541A516F438DA003EEBD3 /* readView.m in Sources */,
+				DF71633B16FEA8690015E788 /* READConnection.m in Sources */,
+				DF6B00661707EBE10073F5C6 /* READParser.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -8,6 +8,8 @@
 
 #import "READViewController.h"
 #import "readView.h"
+#import "READConnection.h"
+
 
 @interface READViewController ()
 
@@ -49,6 +51,13 @@
 {
     UIButton *clickedButton = (UIButton *)sender;
     [clickedButton setTitle:@"Call HTTPRequest method" forState: UIControlStateNormal];
+    READConnection *myConn = [READConnection alloc];
+   // READParser *myParser = [READParser alloc];
+    
+    [myConn setConnection:@"http://espnfc.com/rss/news?section=soccernetfrontpage"];
+    
+  //  [myParser parseData: myConn.receivedData];
+
 }
 
 @end
