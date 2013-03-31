@@ -8,6 +8,7 @@
 
 #import "READConnection.h"
 #import "READParser.h"
+#import <libxml/xmlreader.h>
 
 @implementation READConnection
 
@@ -69,12 +70,46 @@
     // receivedData is declared as a method instance elsewhere
     NSLog(@"Succeeded! Received %d bytes of data",[receivedData length]);
     NSString *str = [[NSString alloc] initWithData:receivedData encoding:NSUTF8StringEncoding];
-   // NSLog(@"str: %@", str);
+    NSLog(@"str: %@", str);
     
     READParser *myParser = [READParser alloc];
 
     
     [myParser establishDBConnection];
+    
+    xmlTextReaderPtr myXMLReader = xmlReaderForMemory([receivedData bytes], [receivedData length], NULL, NULL,  (XML_PARSE_NOBLANKS | XML_PARSE_NOCDATA | XML_PARSE_NOERROR | XML_PARSE_NOWARNING));
+    
+    if (myXMLReader == NULL){
+        NSLog(@"bad xml");
+    } else{
+        NSLog(@"good xml");
+        
+        NSString *currentNode = nil;
+        NSString *nodeValue = nil;
+        char* temp;
+        
+        while (true) {
+            if (!xmlTextReaderRead(myXMLReader)) break;
+            switch (xmlTextReaderNodeType(myXMLReader)) {
+                case XML_READER_TYPE_ELEMENT: {
+                    temp = (char *) xmlTextReaderConstName(myXMLReader);
+                    currentNode = [NSString stringWithCString:temp encoding:NSUTF8StringEncoding];
+                    NSLog(currentNode);
+                    break;
+                }
+                case XML_READER_TYPE_TEXT: {
+                    temp = (char *) xmlTextReaderConstValue(myXMLReader);
+                    nodeValue = [NSString stringWithCString:temp encoding:NSUTF8StringEncoding];
+                    NSLog(nodeValue);
+                    break;
+                }
+                default:
+                    break;
+            }
+        }
+        
+    }
+    
 }
 
 @end
