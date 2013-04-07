@@ -60,7 +60,7 @@
             {
                 NSString *schemeName = [[NSString alloc] initWithUTF8String:(const char*) sqlite3_column_text(statement, 1)];
                 
-                NSLog(schemeName);
+                NSLog(@"%@", schemeName);
                 
                 
                 

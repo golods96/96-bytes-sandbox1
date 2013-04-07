@@ -9,10 +9,10 @@
 #import <Foundation/Foundation.h>
 
 @interface READConnection : NSObject{
-    NSData *receivedData;
+    NSMutableData *receivedData;
 }
 
-@property(nonatomic, retain) NSData *receivedData;
+@property(nonatomic, retain) NSMutableData *receivedData;
 - (void) setConnection: (NSString *) myUrl;
 
 @end
